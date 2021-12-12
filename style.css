@@ -1,4 +1,24 @@
-body {background-color:tan;}
-h1{color:green;}
-
-
+body {
+  margin: 5%;
+  padding: 5%;
+  background-color: rgb(rgb(204, 108, 18));
+  background: rgba(111, 216, 13, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+}
+h1 {
+  color: rgb(10, 25, 235);
+}
+button {
+  border-radius: 10px;
+}
+button:hover {
+  background-color: green;
+  background: rgba(111, 216, 13, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+}

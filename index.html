@@ -1,16 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Simple Interest Calculator</h1>
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        Amount<input type="number" placeholder="Enter principal" id="principal"> 
+        <br> <br>
+        Interest Rate <input type="number" min="0" max = "50" step = "1" placeholder="rate" id="rate">
+        <br> <br>
+        No. of Years <input type="number"  placeholder="Enter time period" id="years">  
+        <br> <br>
+        <button onclick="cal()">Compute Interest</button>
+        <p id="result"></p>
     </body>
 </html>
