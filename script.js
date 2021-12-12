@@ -1,17 +1,31 @@
+function compute(){
+    let principal = document.getElementById("principal").value;
+    if(principal == "" || principal <= 0)
+    {
+        alert("Enter a positive number");
+        document.getElementById("principal").focus();
+        return;
+    }
 
-function cal(){
-    let pr = document.getElementById("principal").value;
-let ti = document.getElementById ("years").value;
-let ra = document.getElementById ("rate").value;
-let text= document.getElementById("result");
+    let rate = document.getElementById("rate").value;
+    let years = document.getElementById("years").value;
+    let interest = principal * years * rate / 100;
 
-if(pr==0 && ti==0 && ra ==0){
-    text.innerHTML="Try input number in the field"
+    let dateNow = new Date();
+    let yearNow = parseInt(dateNow.getFullYear()) + parseInt(years);
+    
+    let resultDisplay = document.getElementById("result");
+    resultDisplay.innerHTML = "If you deposit " + "<span class='highlight'>" + principal + "</span>."  + ", <br> at an interest rate of "+ "<span class='highlight'>" + rate + "</span>%." + "<br> You will receive an amount of " + "<span class='highlight'>" + interest + "</span>" + ", <br> in the year " + "<span class='highlight'>" + yearNow + "</span>";
 }
-else{  
-    let si = (pr*ti*ra/100);
-    let time;
-    text.innerHTML =`If u deposit ${pr}, at an interest rate of ${ra}%. You will receive an amount of ${si},in the year ${time}`;
+
+function SliderValue(){
+    let slider = document.getElementById("rate");
+    let output = document.getElementById("rate_display");
+    output.innerHTML = slider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() 
+    {
+        output.innerHTML = this.value;
+    }  
 }
-}
-        
